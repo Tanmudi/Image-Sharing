@@ -1,0 +1,24 @@
+<div class="homeNavbar">
+    <div class="leftPart" routerLink="/home">PicShare</div>
+    <div class="midPart">
+        <ul class="midList">
+            <li class="navListItems" routerLink="/home">Home</li>
+            <li class="navListItems" routerLink="/aboutUs">About Us</li>
+            <li class="navListItems" routerLink="/gallary">Gallary</li>
+        </ul>
+    </div>
+    <div class="rightPart">
+        <input class="logbutton" type="button" value="Log Out" (click)="onLogout()">
+    </div>
+</div>
+
+<div class="mainDownloadDiv">
+    <div class="imgEnlarged">
+        <img [src]="getData.path" height="500" class="reviewImg"><br>
+    </div>
+    <div class="imgInfo">
+        <label class="filename">{{getData.filename}}</label>
+        <label class="size">{{fileSize}} KB</label>
+        <button class="downloadBtn" (click)="onDownload(getData._id)">Download</button>
+    </div>
+</div>

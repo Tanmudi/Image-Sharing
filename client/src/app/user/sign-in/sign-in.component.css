@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+
+.login{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    /* background-color: gray; */
+    background: url('../../../assets/BluishSky.jpg') no-repeat;
+    background-size: cover;
+}
+
+.logmainframe{
+    /* border: 2px solid black; */
+    width: 30vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 0px 10px -1px rgba(0,0,0,1);
+-webkit-box-shadow: 1px 0px 10px -1px rgba(0,0,0,1);
+-moz-box-shadow: 1px 0px 10px -1px rgba(0,0,0,1);
+}
+
+.loginform{
+    margin-top: 4vh;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 2px solid red; */
+    align-items: center;
+    justify-content: center;
+}
+
+.loginput{
+    width: 100%;
+    position: inherit;
+    margin-top: 2vh;
+    margin-left: 4.3vw;
+}
+
+.loginput>input{
+    width: 80%;
+    height: 30px;
+    /* border-radius: 10px; */
+    padding-left: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid darkgray;
+}
+
+.logtitle{
+    margin: 20px 20px;
+    margin-top: 30px;
+    font-size: 50px;
+    /* border: 2px solid red; */
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+}
+
+.logpageheading{
+    margin: 20px 20px;
+    font-size: 20px;
+    /* border: 2px solid red; */
+    text-align: center;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+.logbtn{
+    margin-top: 20px;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: rgb(112, 106, 106);
+    color: white;
+    border-radius: 10px;
+}
+
+.logbuttondiv{
+    position: inherit;
+    width: 80%;
+    /* width: 100%;
+    padding: 0px 10px; */
+    /* border: 2px solid blue; */
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.signupbtn{
+    position: inherit;
+    padding: 5px 10px;
+    margin-left: 41%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logforgetbtn{
+    position: inherit;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* margin-left: 4vw; */
+    cursor: pointer;
+}
+
+.loglink{
+    color: black;
+    text-decoration: none;
+}

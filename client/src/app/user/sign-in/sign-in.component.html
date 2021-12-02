@@ -1,0 +1,30 @@
+<div class='login'>
+    <div class="logmainframe">
+        <div class="headings">
+            <h1 class="logtitle">PicShare</h1>
+            <h1 class="logpageheading">Login Here</h1>
+            <hr />
+        </div>
+        <form class='loginform' #signInForm="ngForm" (ngSubmit)="signInForm.valid && onSubmit(signInForm)">
+            <div class="loginput">
+                <input type="text" name='email' #email="ngModel" [(ngModel)]="model.email" placeholder='Enter your email' required />
+                <div *ngIf="signInForm.submitted && !email.valid">
+                    <label>Email required</label>
+                </div>
+            </div>
+            <div class="loginput">
+                <input type="password" name='password' #password="ngModel" [(ngModel)]="model.password" placeholder='Enter your password' required minlength="6"/>
+                <div *ngIf="signInForm.submitted && !password.valid">
+                    <label>Password require minimum 4 character</label>
+                </div>
+            </div>
+            <input type="submit" class='logbtn' value="Log In">
+        </form>
+        <div class="logbuttondiv">
+            <button class="signupbtn" routerLink="/signup">Sign Up</button>
+        </div>
+        <div *ngIf="serverErrorMessages">
+            {{serverErrorMessages}}
+        </div>
+    </div>
+</div>

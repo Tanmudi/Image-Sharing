@@ -1,0 +1,42 @@
+
+<div class='register'>
+    <div class="regmainframe">
+        <div class="headings">
+            <h1 class="title">PicShare</h1>
+            <h1 class="pageheading">Register Here</h1>
+            <hr />
+        </div>
+        <form class='registerform' #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+
+            <div class="input">
+                <input type="text" #name="ngModel" [(ngModel)]="userService.selectedUser.name" name='name' placeholder='Enter your name' required />
+                <div *ngIf="signUpForm.submitted && !name.valid">
+                    <label>This field is required</label>
+                </div>
+            </div>
+            <div class="input">
+                <input type="text" #email="ngModel" [(ngModel)]="userService.selectedUser.email" name='email' placeholder='Enter your email' required />
+                <div *ngIf="signUpForm.submitted && !email.valid">
+                    <label>This field is required</label>
+                </div>
+            </div>
+            <div class="input">
+                <input type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name='password' placeholder='Enter your password' minlength="6" required />
+                <div *ngIf="signUpForm.submitted && !password.valid">
+                    <label>This field is required</label>
+                </div>
+            </div>
+            <input type="submit" value="Sign Up" class='registerbtn'>
+        </form>
+        <div class="buttondiv">
+            <button class="loginbtn" routerLink="/login">Log In</button>
+        </div>
+        <div *ngIf="showSuccessMessage">
+            Saved Successfully
+        </div>
+        <div *ngIf="serverErrorMessages">
+            {{serverErrorMessages}}
+        </div>
+        
+    </div>
+</div>

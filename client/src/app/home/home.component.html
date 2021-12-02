@@ -1,0 +1,27 @@
+<div class="homeNavbar">
+    <div class="leftPart" routerLink="/home">PicShare</div>
+    <div class="midPart">
+        <ul class="midList">
+            <li class="navListItems" routerLink="/home">Home</li>
+            <li class="navListItems" routerLink="/aboutUs">About Us</li>
+            <li class="navListItems" routerLink="/gallary">Gallary</li>
+        </ul>
+    </div>
+    <div class="rightPart">
+        <input class="logbutton" type="button" value="Log Out" (click)="onLogout()">
+    </div>
+</div>
+
+<div class="upload">
+    <div class="uploadTitle">Upload File</div>
+    <img [src]="url" height="200" class="reviewImg"><br>
+    <div>
+        <input class="chooseImg" type="file" (change)="onSelectedFile($event)">
+        <button class="uploadBtn" type="button" (click)="onSubmit()">Upload</button>
+    </div>
+    <div *ngIf="imageUploadmsg">
+        Image Uploaded
+    </div>
+</div>
+
+

@@ -1,0 +1,24 @@
+<div class="homeNavbar">
+    <div class="leftPart" routerLink="/home">PicShare</div>
+    <div class="midPart">
+        <ul class="midList">
+            <li class="navListItems" routerLink="/home">Home</li>
+            <li class="navListItems" routerLink="/aboutUs">About Us</li>
+            <li class="navListItems" routerLink="/gallary">Gallary</li>
+        </ul>
+    </div>
+    <div class="rightPart">
+        <input class="logbutton" type="button" value="Log Out" (click)="onLogout()">
+    </div>
+</div>
+
+<div class="imgTitle">
+    Gallary
+    <hr class="imgTitleHr">
+</div>
+
+<div class="mainImg">
+<div class="showImg" *ngFor="let data of imgArray">
+    <img [src]="data.path" height="200" width="360" class="reviewImg" (click)="onDownload(data)"><br>
+</div>
+</div>
